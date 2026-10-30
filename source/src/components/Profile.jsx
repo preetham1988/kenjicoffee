@@ -15,6 +15,10 @@ export default function Profile() {
           <p className="mt-5 text-lg md:text-xl text-muted">The way our family has always made filter coffee.</p>
         </Reveal>
 
+        <Reveal delay={0.1} className="mt-12 md:mt-16 overflow-hidden rounded-[1.75rem] md:rounded-[2.25rem] bg-sand aspect-[4/3] md:aspect-[16/9]">
+          <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" className="w-full h-full object-cover" />
+        </Reveal>
+
         <dl className="mt-14 md:mt-20 border-t border-line">
           {product.profile.map(([term, description], i) => (
             <Reveal key={term} delay={i * 0.05}>

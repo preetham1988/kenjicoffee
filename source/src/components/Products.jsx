@@ -18,7 +18,7 @@ export default function Products() {
             <Reveal key={product.id} delay={i * 0.08} className="h-full">
               <article className="h-full flex flex-col bg-white rounded-[1.75rem] p-4 pb-8 text-center">
                 <div className="aspect-square overflow-hidden rounded-[1.25rem] bg-sand">
-                  <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                  <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <p className="mt-7 text-[13px] text-muted">{product.type}</p>
                 <h3 className="mt-1 text-[1.6rem] leading-tight font-serif px-2">{product.name}</h3>

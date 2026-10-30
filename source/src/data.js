@@ -1,3 +1,5 @@
+import filterCoffeeImage from './images/filter-coffee-dabara.jpg';
+
 export const products = [
   {
     id: 1,
@@ -13,7 +15,8 @@ export const products = [
     type: "Heritage roast",
     notes: "Dark cocoa, roasted hazelnut, caramel, chicory.",
     price: "$22.00",
-    image: "https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&q=80&w=800",
+    image: filterCoffeeImage,
+    imageAlt: "Filter coffee being poured between a brass dabara and tumbler",
     profile: [
       ["Aroma", "Strong and earthy, with notes of dark cocoa, roasted nuts, caramel, and chicory."],
       ["Flavor", "Rich chocolate, roasted hazelnut, caramel, and a mild malty sweetness. Blends well with milk."],
