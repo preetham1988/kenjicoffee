@@ -1,8 +1,10 @@
 import React from 'react';
-import { CONTACT_EMAIL } from '../config';
+import { BRAND, CONTACT_EMAIL } from '../config';
 
 const links = [
   { href: "#shop", label: "Coffee" },
+  { href: "#brew", label: "Brewing guide" },
+  { href: "#faq", label: "FAQ" },
   { href: "#heritage", label: "Estate" },
   { href: "#pitch", label: "The pitch" },
   { href: "#about", label: "Family" },
@@ -15,7 +17,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 pb-8 border-b border-line">
           <div>
-            <p className="text-ink font-semibold tracking-[0.18em] uppercase text-[12px]">Kenjige</p>
+            <p className="text-ink font-semibold tracking-[0.18em] uppercase text-[12px]">{BRAND}</p>
             <p className="mt-3 max-w-sm leading-relaxed">
               Grown, handpicked and roasted on our family estate in Kenjige village, Mudigere. Now shipping across the United States.
             </p>
@@ -27,7 +29,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="pt-6 flex flex-col md:flex-row md:justify-between gap-2">
-          <p>© {new Date().getFullYear()} Kenjige Coffee. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {BRAND}. All rights reserved.</p>
           <p>
             Questions? <a href={`mailto:${CONTACT_EMAIL}`} className="text-leaf hover:underline underline-offset-2">{CONTACT_EMAIL}</a>
           </p>

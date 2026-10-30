@@ -1,5 +1,6 @@
 import React from 'react';
 import Reveal from './Reveal';
+import { BRAND } from '../config';
 
 const pillars = [
   { title: "Early starts.", text: "A strong, smooth cup for the first session of the day." },
@@ -52,7 +53,7 @@ export default function Pitch() {
         <Reveal className="mt-14 md:mt-20 max-w-3xl mx-auto text-center">
           <p className="text-xl md:text-3xl leading-snug tracking-[-0.015em] text-white/60">
             <span className="text-white">Nosthush Kenjige is an American cricketer and fitness enthusiast,</span>{" "}
-            and the third generation of a coffee family from Chikkamagaluru. Kenjige Coffee is made for the same kind of days:
+            and the third generation of a coffee family from Chikkamagaluru. {BRAND} coffee is made for the same kind of days:
             early starts, long sessions, and the quiet ritual of a good cup before it all begins.
           </p>
         </Reveal>

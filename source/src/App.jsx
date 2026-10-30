@@ -6,6 +6,8 @@ import About from './components/About';
 import Pitch from './components/Pitch';
 import Products from './components/Products';
 import Profile from './components/Profile';
+import FAQ from './components/FAQ';
+import StructuredData from './components/StructuredData';
 import Footer from './components/Footer';
 
 function App() {
@@ -16,11 +18,13 @@ function App() {
         <Hero />
         <Products />
         <Profile />
+        <FAQ />
         <Heritage />
         <Pitch />
         <About />
       </main>
       <Footer />
+      <StructuredData />
     </div>
   );
 }

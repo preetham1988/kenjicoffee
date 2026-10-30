@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { BRAND } from '../config';
+
+const proof = ["Single origin", "Family farm since the 1940s", "Shade-grown"];
 
 const ease = [0.16, 1, 0.3, 1];
 
 export default function Hero() {
   return (
-    <section id="top" className="px-5 md:px-8 pt-12 md:pt-16 pb-14 md:pb-20">
+    <section id="top" className="px-5 md:px-8 pt-10 md:pt-16 pb-10 md:pb-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14 items-center">
         <div className="text-center md:text-left">
           <motion.p
@@ -14,7 +17,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease }}
             className="text-[13px] md:text-sm font-medium text-leaf mb-4"
           >
-            Est. 1940s · Chikkamagaluru, India
+            {BRAND} · Chikkamagaluru, India
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
@@ -45,6 +48,19 @@ export default function Hero() {
               Watch the estate <span aria-hidden="true">›</span>
             </a>
           </motion.div>
+          <motion.ul
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.45 }}
+            className="mt-9 md:mt-10 flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 text-[13px] text-muted"
+          >
+            {proof.map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-leaf/70" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </motion.ul>
         </div>
 
         <motion.div
@@ -55,7 +71,7 @@ export default function Hero() {
         >
           <img
             src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1600&auto=format&fit=crop"
-            alt="A cup of Kenjige coffee"
+            alt="A cup of Kenjige Farms coffee"
             className="w-full h-full object-cover"
           />
         </motion.div>
