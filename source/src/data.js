@@ -1,7 +1,7 @@
 import filterCoffeeImage from './images/filter-coffee-dabara.jpg';
 
 // Product details shown on the cards and in Google's search results.
-// `size` (e.g. "12 oz") appears next to the price once filled in.
+// `size` appears next to the price.
 // `roast.level` runs 1 (light) to 5 (dark); leave it null to show only the label.
 // `profile` rows (and an optional `summary`) appear in the cupping & sensory profile tabs.
 export const products = [
@@ -14,7 +14,7 @@ export const products = [
     bestFor: "Cappuccinos and pour-over",
     notes: "Floral, crisp citrus, fresh berries.",
     price: "$24.00",
-    size: "",
+    size: "1 lb",
     image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=800",
     summary: "A pure, unadulterated single-estate Arabica that offers high clarity and vibrant acidity.",
     profile: [
@@ -33,7 +33,7 @@ export const products = [
     bestFor: "Filter coffee with milk",
     notes: "Dark cocoa, roasted hazelnut, caramel, chicory.",
     price: "$22.00",
-    size: "",
+    size: "1 lb",
     image: filterCoffeeImage,
     imageAlt: "Filter coffee being poured between a brass dabara and tumbler",
     profile: [
@@ -53,7 +53,7 @@ export const products = [
     bestFor: "Espresso and moka pot",
     notes: "Dark chocolate, citrus, roasted nuts.",
     price: "$26.00",
-    size: "",
+    size: "1 lb",
     image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=800",
     profile: [
       ["Aroma", "Citrus, floral, hazelnut, and honey notes."],

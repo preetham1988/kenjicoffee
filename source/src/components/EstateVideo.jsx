@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const VIDEO_ID = "AJ8TvbBH0NA";
 const CLIP_START = 4; // seconds: only this part of the video is played, on a loop
-const CLIP_END = 20;
+const CLIP_END = 18;
 // YouTube shows the video title for a moment when playback starts; keep the cover up until it has gone.
 const REVEAL_DELAY_MS = 3500;
 
