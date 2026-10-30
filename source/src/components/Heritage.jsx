@@ -1,56 +1,52 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import Reveal from './Reveal';
+import EstateVideo from './EstateVideo';
+
+const facts = [
+  { value: "1940s", label: "Established" },
+  { value: "Three", label: "Generations" },
+  { value: "Single", label: "Origin" }
+];
 
 export default function Heritage() {
   return (
-    <section id="heritage" className="py-24 px-6 md:px-12 bg-kenjige-cream text-kenjige-brown">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative w-full aspect-video overflow-hidden rounded-sm shadow-xl bg-kenjige-brown">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/AJ8TvbBH0NA?autoplay=1&mute=1&loop=1&playlist=AJ8TvbBH0NA&rel=0&playsinline=1&modestbranding=1"
-              title="Baba Budan Hills Coffee Estate"
-              loading="lazy"
-              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8"
-        >
-          <h2 className="font-serif text-4xl md:text-5xl leading-tight">
-            Rooted in the legendary <br/> <span className="italic text-kenjige-green">Baba Budan Hills.</span>
+    <section id="heritage" className="bg-sand py-24 md:py-36 px-5 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        <Reveal className="text-center max-w-3xl mx-auto">
+          <p className="text-sm font-medium text-leaf mb-4">The estate</p>
+          <h2 className="text-4xl md:text-6xl font-serif tracking-[-0.01em] leading-[1.05]">
+            Rooted in the legendary Baba Budan Hills.
           </h2>
-          <p className="font-sans text-lg leading-relaxed text-kenjige-brown/80">
-            For over eight decades, the Kenjige family has tended to the misty slopes of the Western Ghats. Our home is more than a vintage bungalow; it is the heartbeat of a legacy. We don't just source coffee—we nurture it from seed to cup on our family estate in Kenjige village.
-          </p>
-          <p className="font-sans text-lg leading-relaxed text-kenjige-brown/80">
-            Experience the authentic, shade-grown taste of India's finest Arabica, handpicked and masterfully roasted using secrets passed down through three generations. Brought directly from our Indian estate to the USA.
-          </p>
-          <div className="pt-4 border-t border-kenjige-brown/20 flex gap-12">
-            <div>
-              <p className="font-serif text-3xl mb-1">1940s</p>
-              <p className="font-sans text-sm uppercase tracking-widest opacity-60">Established</p>
+        </Reveal>
+
+        <Reveal delay={0.1} className="mt-14 md:mt-20">
+          <EstateVideo />
+        </Reveal>
+
+        <div className="mt-14 md:mt-20 grid md:grid-cols-2 gap-8 md:gap-16 max-w-5xl mx-auto text-lg md:text-xl leading-relaxed text-muted">
+          <Reveal>
+            <p>
+              For over eight decades, the Kenjige family has tended the misty slopes of the Western Ghats.{" "}
+              <span className="text-ink">Our home is more than a vintage bungalow; it is the heartbeat of a legacy.</span>{" "}
+              We don't just source coffee. We nurture it from seed to cup on our family estate in Kenjige village.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p>
+              Shade-grown, handpicked, and masterfully roasted using secrets passed down through three generations.{" "}
+              <span className="text-ink">Brought directly from our estate in India to the United States.</span>
+            </p>
+          </Reveal>
+        </div>
+
+        <Reveal className="mt-16 md:mt-24 grid grid-cols-3 max-w-4xl mx-auto border-t border-line">
+          {facts.map((fact) => (
+            <div key={fact.label} className="pt-8 text-center">
+              <p className="text-3xl md:text-5xl font-serif">{fact.value}</p>
+              <p className="mt-2 text-sm text-muted">{fact.label}</p>
             </div>
-            <div>
-              <p className="font-serif text-3xl mb-1">Single</p>
-              <p className="font-sans text-sm uppercase tracking-widest opacity-60">Origin</p>
-            </div>
-          </div>
-        </motion.div>
+          ))}
+        </Reveal>
       </div>
     </section>
   );
