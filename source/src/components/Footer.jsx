@@ -2,10 +2,10 @@ import React from 'react';
 import { CONTACT_EMAIL } from '../config';
 
 const links = [
-  { href: "#heritage", label: "Estate" },
-  { href: "#about", label: "Family" },
-  { href: "#pitch", label: "The pitch" },
   { href: "#shop", label: "Coffee" },
+  { href: "#heritage", label: "Estate" },
+  { href: "#pitch", label: "The pitch" },
+  { href: "#about", label: "Family" },
   { href: `mailto:${CONTACT_EMAIL}`, label: "Contact" }
 ];
 
