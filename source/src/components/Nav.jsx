@@ -1,9 +1,9 @@
 import React from 'react';
 
 const links = [
+  { href: "#shop", label: "Coffee" },
   { href: "#heritage", label: "Estate" },
-  { href: "#about", label: "Family" },
-  { href: "#shop", label: "Coffee" }
+  { href: "#about", label: "Family" }
 ];
 
 export default function Nav() {

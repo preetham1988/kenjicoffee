@@ -1,8 +1,11 @@
 /**
  * Kenjige Coffee — order requests to Google Sheets.
- * Paste this into Extensions → Apps Script of your Google Sheet and deploy it as a web app
- * (see README.md in this folder).
+ * Deploy it as a web app (see README.md in this folder), either from the Sheet's
+ * Extensions → Apps Script, or as a standalone project at script.google.com.
  */
+// Standalone project only: the ID from your Sheet's address,
+// https://docs.google.com/spreadsheets/d/THIS_PART/edit
+const SHEET_ID = '';
 const SHEET_NAME = 'Order Requests';
 // Set to an address (e.g. 'kenjigefarms@gmail.com') to also get an email for every request.
 const NOTIFY_EMAIL = '';
@@ -20,7 +23,7 @@ function doPost(e) {
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const ss = SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
     const sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
     if (sheet.getLastRow() === 0) {
       sheet.appendRow(['Received', 'Product', 'Price', 'Phone / Email', 'Type', 'Page']);

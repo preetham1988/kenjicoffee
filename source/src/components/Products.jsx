@@ -5,7 +5,7 @@ import { products } from '../data';
 
 export default function Products() {
   return (
-    <section id="shop" className="bg-sand py-24 md:py-36 px-5 md:px-8">
+    <section id="shop" className="bg-sand py-16 md:py-24 px-5 md:px-8">
       <div className="max-w-6xl mx-auto">
         <Reveal className="text-center">
           <p className="text-sm font-medium text-leaf mb-4">The coffee</p>
@@ -13,7 +13,7 @@ export default function Products() {
           <p className="mt-5 text-lg md:text-xl text-muted">From our estate to your door.</p>
         </Reveal>
 
-        <div className="mt-14 md:mt-20 grid md:grid-cols-3 gap-5">
+        <div className="mt-10 md:mt-14 grid md:grid-cols-3 gap-5">
           {products.map((product, i) => (
             <Reveal key={product.id} delay={i * 0.08} className="h-full">
               <article className="h-full flex flex-col bg-white rounded-[1.75rem] p-4 pb-8 text-center">
