@@ -3,6 +3,7 @@ import { BRAND, CONTACT_EMAIL } from '../config';
 
 const links = [
   { href: "#shop", label: "Coffee" },
+  { href: "#specialty", label: "Why specialty" },
   { href: "#brew", label: "Brewing guide" },
   { href: "#faq", label: "FAQ" },
   { href: "#heritage", label: "Estate" },

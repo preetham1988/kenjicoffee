@@ -16,12 +16,16 @@ const questions = [
     a: "Anywhere in the United States."
   },
   {
+    q: "What makes coffee specialty?",
+    a: <>It's judged on quality. Specialty coffee scores 80 or more out of 100 when tasted by trained cuppers, and is hand-picked and sorted with care. <a href="#specialty" className="text-leaf hover:underline underline-offset-2">See how it compares <span aria-hidden="true">›</span></a></>
+  },
+  {
     q: "What does single origin mean?",
     a: "Every bean comes from one place. Ours are grown on our family farm in Chikkamagaluru, India, so what's in your cup tastes of where it was grown."
   },
   {
     q: "What is South Indian filter coffee?",
-    a: <>A strong coffee decoction brewed slowly in a two-part metal filter, mixed with hot milk and a little sugar, then frothed by pouring between a dabara and tumbler. <a href="#brew" className="text-leaf hover:underline underline-offset-2">See how to make it <span aria-hidden="true">›</span></a></>
+    a: <>A strong coffee decoction brewed slowly in a two-part metal filter, mixed with hot milk and a little sugar, then frothed by pouring between a dabara and tumbler. It's traditionally made with a little chicory, which gives it a thicker body and a gentle bitterness. Ours is specialty beans from our farm, blended with chicory the traditional way. <a href="#brew" className="text-leaf hover:underline underline-offset-2">See how to make it <span aria-hidden="true">›</span></a></>
   },
   {
     q: "How should I store my coffee?",
