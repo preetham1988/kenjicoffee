@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import EstateVideo from './EstateVideo';
 
 export default function Heritage() {
   return (
@@ -12,16 +13,7 @@ export default function Heritage() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full aspect-video overflow-hidden rounded-sm shadow-xl bg-kenjige-brown">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/AJ8TvbBH0NA?autoplay=1&mute=1&loop=1&playlist=AJ8TvbBH0NA&rel=0&playsinline=1&modestbranding=1"
-              title="Baba Budan Hills Coffee Estate"
-              loading="lazy"
-              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <EstateVideo />
         </motion.div>
 
         <motion.div 
