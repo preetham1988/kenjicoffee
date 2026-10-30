@@ -5,6 +5,7 @@ import Heritage from './components/Heritage';
 import About from './components/About';
 import Pitch from './components/Pitch';
 import Products from './components/Products';
+import Specialty from './components/Specialty';
 import Profile from './components/Profile';
 import FAQ from './components/FAQ';
 import StructuredData from './components/StructuredData';
@@ -17,6 +18,7 @@ function App() {
       <main>
         <Hero />
         <Products />
+        <Specialty />
         <Profile />
         <FAQ />
         <Heritage />

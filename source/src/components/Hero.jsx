@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BRAND } from '../config';
 
-const proof = ["Single origin", "Family farm since the 1940s", "Shade-grown"];
+const proof = ["Single origin", "Hand-picked", "Family farm since the 1940s"];
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -33,7 +33,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.16, ease }}
             className="mt-5 md:mt-7 text-lg md:text-xl text-muted max-w-md mx-auto md:mx-0 leading-snug"
           >
-            Three generations of coffee from the Baba Budan Hills. Now in the United States.
+            Specialty coffee from three generations in the Baba Budan Hills. Now in the United States.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}

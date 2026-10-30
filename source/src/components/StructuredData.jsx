@@ -12,7 +12,7 @@ export default function StructuredData() {
       name: BRAND,
       url: origin,
       email: CONTACT_EMAIL,
-      description: "Single-origin coffee from a family farm in Chikkamagaluru, India, three generations since the 1940s."
+      description: "Specialty single-origin coffee from a family farm in Chikkamagaluru, India, three generations since the 1940s."
     },
     ...products.map((product) => ({
       "@context": "https://schema.org",

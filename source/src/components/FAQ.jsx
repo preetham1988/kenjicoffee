@@ -16,6 +16,10 @@ const questions = [
     a: "Anywhere in the United States."
   },
   {
+    q: "What makes coffee specialty?",
+    a: <>It's judged on quality. Specialty coffee scores 80 or more out of 100 when tasted by trained cuppers, and is hand-picked and sorted with care. <a href="#specialty" className="text-leaf hover:underline underline-offset-2">See how it compares <span aria-hidden="true">›</span></a></>
+  },
+  {
     q: "What does single origin mean?",
     a: "Every bean comes from one place. Ours are grown on our family farm in Chikkamagaluru, India, so what's in your cup tastes of where it was grown."
   },

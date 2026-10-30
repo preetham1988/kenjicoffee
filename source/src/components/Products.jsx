@@ -31,7 +31,7 @@ export default function Products() {
     <section id="shop" className="bg-sand pt-12 pb-16 md:py-24 px-5 md:px-8">
       <div className="max-w-6xl mx-auto">
         <Reveal className="text-center">
-          <p className="text-sm font-medium text-leaf mb-4">The coffee</p>
+          <p className="text-sm font-medium text-leaf mb-4">Specialty coffee</p>
           <h2 className="text-4xl md:text-6xl font-serif tracking-[-0.01em] leading-[1.05]">Freshly roasted.</h2>
           <p className="mt-5 text-lg md:text-xl text-muted">Grown on our farm. Sent from our family to yours.</p>
         </Reveal>
