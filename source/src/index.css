@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
+  }
   body {
-    @apply bg-kenjige-cream text-kenjige-brown antialiased;
+    @apply bg-paper text-ink antialiased font-sans;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    @apply bg-leaf text-white;
   }
 }

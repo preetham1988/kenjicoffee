@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { SHEETS_WEBHOOK_URL, CONTACT_EMAIL } from '../config';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -11,6 +11,7 @@ function contactType(value) {
 }
 
 export default function OrderRequest({ product }) {
+  const inputId = useId();
   const [open, setOpen] = useState(false);
   const [contact, setContact] = useState("");
   const [website, setWebsite] = useState(""); // honeypot, left empty by people
@@ -59,11 +60,11 @@ export default function OrderRequest({ product }) {
   if (status === "sent" || status === "mailto") {
     return (
       <div>
-        <p className="font-sans font-medium">{product.price}</p>
-        <p className="font-sans text-sm text-kenjige-green mt-3" role="status">
+        <p className="text-[17px] font-medium">{product.price}</p>
+        <p className="mt-3 text-[15px] text-leaf max-w-xs mx-auto" role="status">
           {status === "sent"
-            ? "Thank you! We'll reach out shortly to confirm your order."
-            : <>Your email app should open with your request. Just press send, or write to <a href={mailto} className="underline">{CONTACT_EMAIL}</a>.</>}
+            ? "Thank you. We'll be in touch shortly to confirm your order."
+            : <>Your email app should open with your request. Just press send, or write to <a href={mailto} className="underline underline-offset-2">{CONTACT_EMAIL}</a>.</>}
         </p>
       </div>
     );
@@ -72,37 +73,38 @@ export default function OrderRequest({ product }) {
   return (
     <div>
       <div className="flex items-center justify-center gap-5">
-        <p className="font-sans font-medium">{product.price}</p>
+        <p className="text-[17px] font-medium">{product.price}</p>
         {!open && (
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="border border-kenjige-brown text-kenjige-brown px-5 py-2 uppercase tracking-widest text-xs font-medium hover:bg-kenjige-brown hover:text-kenjige-cream transition-colors"
+            className="rounded-full bg-leaf text-white px-5 py-2 text-[14px] font-medium hover:bg-leaf/90 transition-colors"
           >
-            Order Now
+            Order
           </button>
         )}
       </div>
       {open && (
-        <form onSubmit={handleSubmit} className="max-w-xs mx-auto text-left mt-4" noValidate>
-          <label htmlFor={`contact-${product.id}`} className="block font-sans text-xs uppercase tracking-[0.15em] text-kenjige-brown/60 mb-2">
-            Your phone number or email
+        <form onSubmit={handleSubmit} className="max-w-xs mx-auto text-left mt-5" noValidate>
+          <label htmlFor={inputId} className="block text-[13px] text-muted mb-2 text-center">
+            Leave your phone number or email and we'll be in touch.
           </label>
-          <div className="flex">
+          <div className="flex items-center rounded-full bg-paper border border-line focus-within:border-leaf focus-within:ring-4 focus-within:ring-leaf/10 transition">
             <input
-              id={`contact-${product.id}`}
+              id={inputId}
               type="text"
               autoComplete="email"
               autoFocus
               value={contact}
               onChange={(e) => setContact(e.target.value)}
-              placeholder="+1 555 123 4567 or you@email.com"
-              className="min-w-0 flex-1 bg-transparent border border-kenjige-brown/30 px-3 py-2 text-sm focus:outline-none focus:border-kenjige-brown placeholder-kenjige-brown/40"
+              placeholder="Phone or email"
+              className="min-w-0 flex-1 bg-transparent pl-5 pr-2 py-2.5 text-[15px] focus:outline-none placeholder-muted/70"
             />
             <button
               type="submit"
               disabled={status === "sending"}
-              className="bg-kenjige-brown text-kenjige-cream px-4 py-2 uppercase tracking-widest text-xs font-medium hover:bg-kenjige-green transition-colors disabled:opacity-60"
+              aria-label="Send"
+              className="m-1 rounded-full bg-ink text-white px-4 py-1.5 text-[13px] font-medium hover:bg-ink/85 transition-colors disabled:opacity-60"
             >
               {status === "sending" ? "Sending…" : "Send"}
             </button>
@@ -117,13 +119,13 @@ export default function OrderRequest({ product }) {
             onChange={(e) => setWebsite(e.target.value)}
             className="hidden"
           />
-          {error && <p className="font-sans text-xs text-red-700 mt-2">{error}</p>}
+          {error && <p className="text-[13px] text-red-700 mt-2 text-center">{error}</p>}
           {status === "error" && (
-            <p className="font-sans text-xs text-red-700 mt-2">Something went wrong. Please email us instead.</p>
+            <p className="text-[13px] text-red-700 mt-2 text-center">Something went wrong. Please email us instead.</p>
           )}
-          <p className="font-sans text-xs text-kenjige-brown/60 mt-3">
-            We'll contact you to confirm your order. Or write to{" "}
-            <a href={mailto} className="underline hover:text-kenjige-brown">{CONTACT_EMAIL}</a>
+          <p className="text-[13px] text-muted mt-3 text-center">
+            Or write to{" "}
+            <a href={mailto} className="text-leaf hover:underline underline-offset-2">{CONTACT_EMAIL}</a>
           </p>
         </form>
       )}

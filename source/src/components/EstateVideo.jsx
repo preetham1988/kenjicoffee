@@ -66,7 +66,7 @@ export default function EstateVideo() {
   });
 
   return (
-    <div className="relative w-full aspect-video overflow-hidden rounded-sm shadow-xl bg-kenjige-brown">
+    <div className="relative w-full aspect-video overflow-hidden rounded-[1.75rem] md:rounded-[2.25rem] bg-ink">
       <iframe
         ref={iframeRef}
         src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?${params}`}

@@ -1,88 +1,70 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import Reveal from './Reveal';
 import sketch from './sketch.svg?raw';
 
 const generations = [
   {
     numeral: "I",
-    label: "The Foundation",
-    name: "Our Grandmother",
+    label: "The foundation",
+    name: "Our grandmother",
     text: "Kenjige Coffee began in the hills of Chikkamagaluru, where our grandmother laid the foundation for the Kenjige properties and a family legacy rooted in the land."
   },
   {
     numeral: "II",
-    label: "The Pioneer",
+    label: "The pioneer",
     name: "Pradeep Kenjige",
     text: "Her son, Pradeep Kenjige, carried that vision forward — a pioneer whose passion and hard work shaped Kenjige Estate and made coffee a part of our family’s way of life."
   },
   {
     numeral: "III",
-    label: "The Third Generation",
+    label: "The third generation",
     name: "Nosthush Kenjige",
+    tag: "American cricketer · Fitness enthusiast",
     text: "Today, the third generation, Nosthush Kenjige, carries that legacy from Chikkamagaluru to the United States — sharing the coffee, tradition and story of our family with a new generation."
   }
 ];
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
-
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-28 px-6 md:px-12 bg-[#EFE9DF] text-kenjige-brown border-y border-kenjige-brown/10">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <p className="font-sans text-xs font-semibold uppercase tracking-[0.3em] text-kenjige-brown/60 mb-4">About Us</p>
-          <h2 className="font-serif text-4xl md:text-5xl leading-tight uppercase tracking-wide">
-            Three Generations. <span className="italic text-kenjige-green">One Legacy.</span>
+    <section id="about" className="py-24 md:py-36 px-5 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        <Reveal className="text-center max-w-3xl mx-auto">
+          <p className="text-sm font-medium text-leaf mb-4">About us</p>
+          <h2 className="text-4xl md:text-6xl font-serif tracking-[-0.01em] leading-[1.05]">
+            Three generations.<br />
+            <span className="text-muted">One legacy.</span>
           </h2>
-        </motion.div>
+        </Reveal>
 
         {/* Pencil-style sketch: the grandmother's deep-rooted tree, the Kenjige Estate bungalow, the journey to the USA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2 }}
-          role="img"
-          aria-label="Pencil sketch of the Kenjige story: the Chikkamagaluru hills and a deep-rooted tree, the Kenjige Estate bungalow among coffee plants, and a plane carrying a cup of coffee to the United States"
-          className="bg-[#FBF8F2] border border-kenjige-brown/15 rounded-sm p-4 md:px-10 md:py-8 shadow-[0_20px_40px_-24px_rgba(62,39,35,0.4)] mb-16 [&_svg]:block [&_svg]:w-full [&_svg]:h-auto"
-          dangerouslySetInnerHTML={{ __html: sketch }}
-        />
+        <Reveal delay={0.1} className="mt-14 md:mt-20">
+          <div
+            role="img"
+            aria-label="Pencil sketch of the Kenjige story: the Chikkamagaluru hills and a deep-rooted tree, the Kenjige Estate bungalow among coffee plants, and a plane carrying a cup of coffee to the United States"
+            className="bg-[#FBF8F2] rounded-[1.75rem] md:rounded-[2.25rem] px-4 py-6 md:px-14 md:py-12 [&_svg]:block [&_svg]:w-full [&_svg]:h-auto"
+            dangerouslySetInnerHTML={{ __html: sketch }}
+          />
+        </Reveal>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-14"
-        >
-          {generations.map((gen) => (
-            <motion.div key={gen.numeral} variants={item} className="border-t border-kenjige-brown/20 pt-6">
-              <span className="block font-serif italic text-4xl leading-none text-kenjige-green mb-3">{gen.numeral}</span>
-              <p className="font-sans text-xs uppercase tracking-[0.2em] text-kenjige-brown/60 mb-1">{gen.label}</p>
-              <h3 className="font-serif text-2xl mb-4">{gen.name}</h3>
-              <p className="font-sans text-base leading-relaxed text-kenjige-brown/80">{gen.text}</p>
-            </motion.div>
+        <div className="mt-16 md:mt-24 grid md:grid-cols-3 gap-12 md:gap-12">
+          {generations.map((gen, i) => (
+            <Reveal key={gen.numeral} delay={i * 0.08}>
+              <p className="font-serif italic text-3xl text-leaf leading-none">{gen.numeral}</p>
+              <p className="mt-5 text-sm text-muted">{gen.label}</p>
+              <h3 className="mt-1 text-2xl font-serif">{gen.name}</h3>
+              {gen.tag && (
+                <a href="#pitch" className="mt-3 inline-block rounded-full bg-leaf/10 text-leaf px-3 py-1 text-[12px] font-medium hover:bg-leaf/15 transition-colors">
+                  {gen.tag}
+                </a>
+              )}
+              <p className="mt-4 text-[17px] leading-relaxed text-muted">{gen.text}</p>
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
 
-        <p className="mt-16 text-center font-serif italic text-3xl md:text-4xl text-kenjige-green">From our estate to your cup.</p>
+        <Reveal className="mt-20 md:mt-28 text-center">
+          <p className="font-serif italic text-3xl md:text-5xl text-ink">From our estate to your cup.</p>
+        </Reveal>
       </div>
     </section>
   );
