@@ -1,0 +1,99 @@
+<svg viewBox="0 0 1200 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <filter id="kj-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="kj-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#3e2723" stroke-width="0.9" stroke-opacity="0.45"/>
+    </pattern>
+    <pattern id="kj-hatch2" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#2e4f32" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+  <g filter="url(#kj-pencil)" fill="none" stroke="#3e2723" stroke-linecap="round" stroke-linejoin="round">
+    <!-- distant hills of Chikkamagaluru, spanning the whole scene -->
+    <path d="M10 210 Q90 140 170 172 Q250 200 330 160 Q400 128 470 172 Q545 205 620 158 Q700 118 780 168 Q850 200 930 148 Q1000 110 1080 160 Q1135 192 1190 158" stroke-width="1.3" stroke-opacity="0.55"/>
+    <path d="M14 214 Q92 146 172 176 Q250 204 332 164" stroke-width="0.8" stroke-opacity="0.35"/>
+    <path d="M10 240 Q120 185 230 215 T450 200 T650 215" stroke-width="1.1" stroke-opacity="0.45"/>
+    <path d="M110 186 Q170 160 230 185 L230 215 Q150 200 110 210 Z" fill="url(#kj-hatch2)" stroke="none"/>
+    <!-- mist lines -->
+    <path d="M60 165 h70 M300 120 h55 M560 150 h80 M880 112 h60" stroke-width="0.9" stroke-opacity="0.3"/>
+
+    <!-- ground line, the thread that runs through three generations -->
+    <path d="M20 282 C200 276 330 288 480 280 S800 274 960 283 S1120 278 1180 281" stroke-width="2"/>
+    <path d="M24 286 C200 281 330 292 480 284" stroke-width="0.8" stroke-opacity="0.4"/>
+
+    <!-- I. The grandmother's tree: a deep-rooted banyan on the land -->
+    <path d="M196 282 C198 250 192 225 200 196 M214 282 C212 250 218 225 210 196" stroke-width="2"/>
+    <path d="M200 205 C185 200 170 190 160 176 M210 205 C230 198 245 186 255 172 M205 196 L205 170" stroke-width="1.5"/>
+    <path d="M150 182 C120 180 112 150 135 140 C130 112 165 100 180 115 C190 90 230 92 236 115 C258 104 285 125 272 148 C292 160 280 190 255 186 C245 200 220 198 210 190 C195 200 170 198 160 186 C155 188 152 185 150 182 Z" stroke-width="1.7"/>
+    <path d="M150 182 C135 175 132 160 140 152 M178 120 C185 132 200 135 210 128 M240 125 C250 140 262 140 268 150" stroke-width="0.9" stroke-opacity="0.5"/>
+    <path d="M160 180 C175 172 190 176 205 172 C225 178 245 172 262 176 C250 184 235 188 210 186 C190 190 172 188 160 180 Z" fill="url(#kj-hatch)" stroke="none"/>
+    <!-- aerial roots -->
+    <path d="M170 186 L172 240 M250 184 L247 236 M235 190 L236 222" stroke-width="0.9" stroke-opacity="0.6"/>
+    <!-- roots below the ground -->
+    <path d="M198 284 C190 300 170 306 150 318 M205 285 C206 305 200 322 204 340 M212 284 C222 300 245 306 268 316 M200 292 C185 305 175 325 168 336 M210 292 C225 310 236 322 240 340" stroke-width="1.1" stroke-opacity="0.55"/>
+    <path d="M150 318 l-12 4 M268 316 l12 5 M204 340 l-6 10 M168 336 l-8 6" stroke-width="0.8" stroke-opacity="0.4"/>
+    <!-- a young sapling beside it: the next generation -->
+    <path d="M300 282 C301 268 299 258 302 248" stroke-width="1.3"/>
+    <path d="M302 258 C292 252 288 244 290 238 C298 240 303 248 302 258 Z M302 252 C312 246 318 240 318 234 C310 234 303 242 302 252 Z" stroke-width="1.1"/>
+
+    <!-- II. Kenjige Estate: the bungalow among coffee -->
+    <!-- silver oak shade tree -->
+    <path d="M745 282 L748 120 M748 170 L725 150 M748 145 L772 128 M748 200 L770 185" stroke-width="1.6"/>
+    <path d="M748 115 C730 118 722 135 732 145 C715 150 718 170 735 168 M748 115 C768 116 776 132 764 140 C782 146 780 168 762 165 M735 190 C722 196 728 210 742 205 M762 180 C778 186 774 202 758 198" stroke-width="1.1" stroke-opacity="0.7"/>
+    <!-- roof -->
+    <path d="M520 215 L605 160 L690 215 Z" stroke-width="1.8"/>
+    <path d="M508 222 L520 215 L690 215 L702 222" stroke-width="1.5"/>
+    <path d="M540 202 L670 202 M558 190 L652 190 M575 179 L635 179 M590 170 L620 170" stroke-width="0.8" stroke-opacity="0.5"/>
+    <path d="M530 210 L605 166 L682 210" fill="url(#kj-hatch)" stroke="none"/>
+    <!-- walls, veranda pillars, door, windows -->
+    <path d="M528 222 L528 282 M682 222 L682 282" stroke-width="1.5"/>
+    <path d="M552 222 L552 282 M578 222 L578 282 M632 222 L632 282 M658 222 L658 282" stroke-width="1.1"/>
+    <path d="M594 282 L594 240 Q605 230 616 240 L616 282" stroke-width="1.3"/>
+    <path d="M533 240 h14 v18 h-14 Z M663 240 h14 v18 h-14 Z M540 240 v18 M670 240 v18" stroke-width="0.9"/>
+    <path d="M528 262 L682 262" stroke-width="0.8" stroke-opacity="0.5"/>
+    <path d="M590 282 h32 l4 6 h-40 Z" stroke-width="1"/>
+    <!-- rows of coffee bushes -->
+    <path d="M430 282 q10 -22 20 0 q10 -20 20 0 q10 -22 20 0 M700 282 q9 -18 18 0 q9 -20 18 0 M790 282 q10 -22 20 0 q10 -20 20 0" stroke-width="1.1"/>
+    <!-- foreground coffee branch with cherries -->
+    <path d="M410 350 C440 320 470 300 505 292" stroke-width="1.6"/>
+    <path d="M440 324 C428 306 432 292 446 288 C452 302 450 316 440 324 Z M466 308 C470 290 484 282 496 284 C492 298 480 306 466 308 Z M452 318 C468 328 482 328 492 320 C480 312 464 312 452 318 Z" stroke-width="1.1"/>
+    <path d="M440 324 L444 296 M466 308 L490 287 M452 318 L486 321" stroke-width="0.6" stroke-opacity="0.5"/>
+    <circle cx="458" cy="324" r="4.2" stroke-width="1.1" fill="#7a2e22" fill-opacity="0.35"/>
+    <circle cx="466" cy="327" r="4" stroke-width="1.1" fill="#7a2e22" fill-opacity="0.35"/>
+    <circle cx="461" cy="332" r="3.8" stroke-width="1.1" fill="#7a2e22" fill-opacity="0.35"/>
+    <circle cx="482" cy="306" r="3.8" stroke-width="1.1" fill="#7a2e22" fill-opacity="0.35"/>
+    <circle cx="488" cy="311" r="3.6" stroke-width="1.1" fill="#7a2e22" fill-opacity="0.35"/>
+
+    <!-- III. From Chikkamagaluru to the United States -->
+    <path d="M800 250 C860 150 960 90 1070 92" stroke-width="1.2" stroke-dasharray="7 7" stroke-opacity="0.7"/>
+    <!-- airplane -->
+    <g transform="translate(1090 92) rotate(-6)">
+      <path d="M-30 0 C-20 -5 20 -5 34 -1 C38 0 38 3 34 4 C20 6 -20 6 -30 3 Z" stroke-width="1.5"/>
+      <path d="M-4 -2 L-16 -22 L-8 -22 L10 -2 M-4 4 L-14 22 L-6 22 L10 4 M-28 0 L-36 -12 L-30 -12 L-20 -1" stroke-width="1.3"/>
+      <path d="M-14 1 h2 M-6 1 h2 M2 1 h2 M10 1 h2" stroke-width="1.6" stroke-opacity="0.6"/>
+    </g>
+    <!-- coffee cup and saucer, steam rising -->
+    <path d="M960 222 L966 266 C968 278 1022 278 1024 266 L1030 222" stroke-width="1.8"/>
+    <ellipse cx="995" cy="222" rx="35" ry="7" stroke-width="1.6"/>
+    <ellipse cx="995" cy="223" rx="27" ry="4" fill="#3e2723" fill-opacity="0.25" stroke-width="0.8"/>
+    <path d="M1028 232 C1048 230 1050 256 1024 258" stroke-width="1.5"/>
+    <path d="M940 280 C955 290 1035 290 1050 280 C1040 274 950 274 940 280 Z" stroke-width="1.5"/>
+    <path d="M968 234 L972 266 C990 272 1005 272 1018 268" fill="url(#kj-hatch)" stroke="none"/>
+    <path d="M982 210 C972 198 992 188 982 175 M997 208 C987 192 1009 182 999 165 M1012 210 C1004 198 1022 190 1014 178" stroke-width="1.1" stroke-opacity="0.6"/>
+    <!-- a distant American skyline -->
+    <path d="M1075 282 V236 h14 V282 M1092 282 V214 h12 V282 M1100 214 V204 M1108 282 V246 h16 V282 M1127 282 V226 h10 l4 -8 l4 8 V282 M1148 282 V242 h18 V282" stroke-width="1" stroke-opacity="0.55"/>
+    <path d="M1095 222 h6 M1095 232 h6 M1095 242 h6 M1112 254 h8 M1112 264 h8 M1130 236 h8 M1130 248 h8" stroke-width="0.7" stroke-opacity="0.4"/>
+  </g>
+  <!-- generation markers -->
+  <g font-family="Playfair Display, Georgia, serif" font-style="italic" fill="#3e2723" text-anchor="middle">
+    <text x="215" y="372" font-size="22">I</text>
+    <text x="605" y="372" font-size="22">II</text>
+    <text x="1000" y="372" font-size="22">III</text>
+  </g>
+  <g stroke="#3e2723" stroke-opacity="0.35" stroke-width="1">
+    <path d="M240 365 H575 M635 365 H965"/>
+  </g>
+</svg>
