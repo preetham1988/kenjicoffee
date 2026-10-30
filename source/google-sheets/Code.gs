@@ -1,5 +1,5 @@
 /**
- * Kenjige Coffee — order requests to Google Sheets.
+ * Kenjige Farms — order requests to Google Sheets.
  * Deploy it as a web app (see README.md in this folder), either from the Sheet's
  * Extensions → Apps Script, or as a standalone project at script.google.com.
  */
@@ -18,7 +18,7 @@ function doPost(e) {
   const contact = clean_(p.contact);
   if (!contact) return json_({ ok: false, error: 'missing contact' });
 
-  const row = [new Date(), clean_(p.product), clean_(p.price), contact, clean_(p.contactType), clean_(p.page)];
+  const row = [new Date(), clean_(p.product), clean_(p.price), clean_(p.frequency), contact, clean_(p.contactType), clean_(p.page)];
 
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
@@ -26,7 +26,7 @@ function doPost(e) {
     const ss = SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
     const sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['Received', 'Product', 'Price', 'Phone / Email', 'Type', 'Page']);
+      sheet.appendRow(['Received', 'Product', 'Price', 'Frequency', 'Phone / Email', 'Type', 'Page']);
       sheet.setFrozenRows(1);
     }
     sheet.appendRow(row);
@@ -35,7 +35,7 @@ function doPost(e) {
   }
 
   if (NOTIFY_EMAIL) {
-    MailApp.sendEmail(NOTIFY_EMAIL, 'New order request: ' + row[1], 'Product: ' + row[1] + ' (' + row[2] + ')\nContact: ' + contact);
+    MailApp.sendEmail(NOTIFY_EMAIL, 'New order request: ' + row[1], 'Product: ' + row[1] + ' (' + row[2] + ', ' + row[3] + ')\nContact: ' + contact);
   }
   return json_({ ok: true });
 }

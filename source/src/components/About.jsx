@@ -7,7 +7,7 @@ const generations = [
     numeral: "I",
     label: "The foundation",
     name: "Our grandmother",
-    text: "Kenjige Coffee began in the hills of Chikkamagaluru, where our grandmother laid the foundation for the Kenjige properties and a family legacy rooted in the land."
+    text: "Kenjige Farms began in the hills of Chikkamagaluru, where our grandmother laid the foundation for the Kenjige properties and a family legacy rooted in the land."
   },
   {
     numeral: "II",

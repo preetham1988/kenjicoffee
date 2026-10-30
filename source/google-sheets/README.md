@@ -6,7 +6,7 @@ Until this is set up, the form opens an email to kenjigefarms@gmail.com instead.
 ## One-time setup (about 5 minutes)
 
 1. Sign in to Google as the account that should own the data (e.g. kenjigefarms@gmail.com)
-   and create a new Google Sheet, e.g. "Kenjige Coffee Orders". Copy the long ID from its address:
+   and create a new Google Sheet, e.g. "Kenjige Farms Orders". Copy the long ID from its address:
    `https://docs.google.com/spreadsheets/d/`**`THIS_PART`**`/edit`
 2. Go to **https://script.google.com** (signed in as the same account) and click **New project**.
 3. Delete what's in `Code.gs`, paste in the contents of [`Code.gs`](./Code.gs) from this folder,
@@ -24,7 +24,7 @@ Until this is set up, the form opens an email to kenjigefarms@gmail.com instead.
    ```
 7. Rebuild the site (see `source/README.md`) and push.
 
-Requests appear in an "Order Requests" tab with the time, product, price, phone/email and page.
+Requests appear in an "Order Requests" tab with the time, product, price, frequency (one-time or every month), phone/email and page.
 
 If you later edit `Code.gs`, use **Deploy → Manage deployments → Edit → New version** so the URL stays the same.
 

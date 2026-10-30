@@ -1,4 +1,4 @@
-# Kenjige Coffee — website source
+# Kenjige Farms — website source
 
 React + Vite + Tailwind CSS + Framer Motion. The built site lives at the repository root
 (`index.html` and `assets/`), which is what gets published.
