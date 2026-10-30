@@ -1,7 +1,7 @@
 import filterCoffeeImage from './images/filter-coffee-dabara.jpg';
 
 // Product details shown on the cards and in Google's search results.
-// `size` appears next to the price.
+// `size` appears next to the price. `blend` (optional) adds a Blend row to the card.
 // `roast.level` runs 1 (light) to 5 (dark); leave it null to show only the label.
 // `profile` rows (and an optional `summary`) appear in the cupping & sensory profile tabs.
 export const products = [
@@ -30,6 +30,7 @@ export const products = [
     shortName: "Filter coffee",
     type: "South Indian filter coffee",
     roast: { label: "Heritage roast", level: null },
+    blend: "Specialty beans with chicory",
     bestFor: "Filter coffee with milk",
     notes: "Dark cocoa, roasted hazelnut, caramel, chicory.",
     price: "$22.00",
@@ -37,6 +38,7 @@ export const products = [
     image: filterCoffeeImage,
     imageAlt: "Filter coffee being poured between a brass dabara and tumbler",
     profile: [
+      ["Blend", "Specialty coffee beans from our farm, blended with chicory the traditional South Indian way."],
       ["Aroma", "Strong and earthy, with notes of dark cocoa, roasted nuts, caramel, and chicory."],
       ["Flavor", "Rich chocolate, roasted hazelnut, caramel, and a mild malty sweetness. Blends well with milk."],
       ["Acidity", "Low acidity with a smooth and mellow taste."],

@@ -66,6 +66,12 @@ export default function Products() {
                     <dt className="text-muted">Roast</dt>
                     <dd className="text-right"><RoastScale roast={product.roast} /></dd>
                   </div>
+                  {product.blend && (
+                    <div className="flex items-center justify-between gap-4 py-2.5 border-b border-line">
+                      <dt className="text-muted">Blend</dt>
+                      <dd className="text-right">{product.blend}</dd>
+                    </div>
+                  )}
                   <div className="flex items-center justify-between gap-4 py-2.5 border-b border-line">
                     <dt className="text-muted">Best for</dt>
                     <dd className="text-right">{product.bestFor}</dd>

@@ -25,7 +25,7 @@ const questions = [
   },
   {
     q: "What is South Indian filter coffee?",
-    a: <>A strong coffee decoction brewed slowly in a two-part metal filter, mixed with hot milk and a little sugar, then frothed by pouring between a dabara and tumbler. <a href="#brew" className="text-leaf hover:underline underline-offset-2">See how to make it <span aria-hidden="true">›</span></a></>
+    a: <>A strong coffee decoction brewed slowly in a two-part metal filter, mixed with hot milk and a little sugar, then frothed by pouring between a dabara and tumbler. It's traditionally made with a little chicory, which gives it a thicker body and a gentle bitterness. Ours is specialty beans from our farm, blended with chicory the traditional way. <a href="#brew" className="text-leaf hover:underline underline-offset-2">See how to make it <span aria-hidden="true">›</span></a></>
   },
   {
     q: "How should I store my coffee?",
